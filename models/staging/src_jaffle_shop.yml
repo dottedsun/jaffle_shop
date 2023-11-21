@@ -6,9 +6,20 @@ sources:
     schema: PUBLIC
     tables:
       - name: raw_customers
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+
       - name: raw_orders
       # Problema porque el código del repositorio varía en función de las lecciones
         loaded_at_field: _etl_loaded_at # Fallará porque este campo no existe
         freshness:
           warn_after: {count: 12, period: hour}
           error_after: {count: 24, period: hour}
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
