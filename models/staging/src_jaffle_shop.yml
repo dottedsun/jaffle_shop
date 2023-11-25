@@ -2,17 +2,21 @@ version: 2
 
 sources:
   - name: PUBLIC
+    description: A clone of a Potstgres application database.
     database: JAFFLE_SHOP
     schema: PUBLIC
     tables:
       - name: raw_customers
+        description: Raw customers data.
         columns:
           - name: id
+            description: Customers PK.
             tests:
               - unique
               - not_null
 
       - name: raw_orders
+        description: Raw orders data.
       # Problema porque el código del repositorio varía en función de las lecciones
         loaded_at_field: _etl_loaded_at # Fallará porque este campo no existe
         freshness:
@@ -20,6 +24,7 @@ sources:
           error_after: {count: 24, period: hour}
         columns:
           - name: id
+            description: Orders PK.
             tests:
               - unique
               - not_null
