@@ -1,1 +1,1 @@
-{{ union_tables_by_prefix(jaffle_shop, public, dim_) }}
+{{ union_tables_by_prefix('JAFFLE_SHOP', 'PUBLIC', 'dim') }}
