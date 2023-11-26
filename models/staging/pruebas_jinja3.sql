@@ -1,0 +1,1 @@
+{{ union_tables_by_prefix(jaffle_shop, public, dim_) }}
