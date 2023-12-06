@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    database: JAFFLE_SHOP
+    schema: DBT_REFACTORING
+    tables:
+      - name: seed_refactoring_customers
+      - name: seed_refactoring_orders

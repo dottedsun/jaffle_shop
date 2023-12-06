@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: stripe
+    database: JAFFLE_SHOP
+    schema: DBT_REFACTORING
+    tables:
+      - name: seed_refactoring_payments
